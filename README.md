@@ -51,7 +51,9 @@ Telemetry Downlink
 ↓
 Ground Station Receiver
 
+## 🧩 System Architecture Diagram
 
+<img width="127" height="1331" alt="satellite-architecture" src="https://github.com/user-attachments/assets/12f6320c-6a60-4746-91d1-a478de22653b" />
 ---
 
 ## 🎯 Assets Identified
