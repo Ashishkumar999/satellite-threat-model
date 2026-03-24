@@ -16,6 +16,13 @@ The objective is to understand how attackers could target satellite infrastructu
 
 ---
 
+## 🧩 Satellite Security Architecture Diagram
+
+![Satellite Security Architecture](images/satellite-security-architecture.png)
+
+This diagram illustrates the end-to-end satellite communication architecture including the ground segment, RF communication layer, onboard spacecraft subsystems, payload pipeline, and telemetry return path along with major cybersecurity attack surfaces.
+
+
 ## 🎯 Project Objective
 
 This project demonstrates:
