@@ -16,13 +16,6 @@ The objective is to understand how attackers could target satellite infrastructu
 
 ---
 
-## 🧩 Satellite Security Architecture Diagram
-
-![Satellite Security Architecture](images/satellite-security-architecture.png)
-
-This diagram illustrates the end-to-end satellite communication architecture including the ground segment, RF communication layer, onboard spacecraft subsystems, payload pipeline, and telemetry return path along with major cybersecurity attack surfaces.
-
-
 ## 🎯 Project Objective
 
 This project demonstrates:
@@ -37,7 +30,8 @@ This serves as an entry-level portfolio project in Space Cybersecurity.
 
 ---
 
-## 🧩 System Architecture
+## 🛰️ Satellite Communication Architecture
+
 Mission Control
 ↓
 Command Server
@@ -68,8 +62,12 @@ This diagram highlights major cybersecurity attack surfaces across the satellite
 
 ---
 
-## 🧩 System Architecture Diagram
-<img width="1041" height="231" alt="satellite-architecture" src="https://github.com/user-attachments/assets/8032bca9-106c-4002-8c58-4c05db7b5ab2" />
+## 🧩 Satellite Security Architecture Diagram
+
+![Satellite Security Architecture](images/satellite-security-architecture.png)
+
+This diagram illustrates the end-to-end satellite communication architecture including the ground segment, RF communication layer, onboard spacecraft subsystems, payload pipeline, and telemetry return path along with major cybersecurity attack surfaces.
+
 
 ---
 
@@ -175,25 +173,107 @@ Satellite Behavior Altered
 
 ---
 
+## 📊 Satellite Security Threat Assessment Summary
+
+This section provides a structured cybersecurity assessment of a representative satellite communication architecture across the ground, communication, and space segments.
+
+### Threat Model Scope
+
+The assessment evaluates risks affecting:
+
+- Ground Segment (mission control center, operator consoles, command servers)
+- Communication Segment (RF uplink and telemetry downlink channels)
+- Space Segment (onboard computer, satellite subsystems, payload instruments)
+
+---
+
+### High-Impact Threat Scenarios
+
+#### 1. Ground Segment Compromise
+
+Attack Path:
+
+Attacker → Phishing Email → Operator Credential Theft → Mission Control Access → Command Server Exposure → Unauthorized Telecommand Transmission
+
+Impact:
+
+Potential spacecraft orientation manipulation, payload misuse, or communication disruption.
+
+---
+
+#### 2. RF Signal Spoofing Attack
+
+Attack Path:
+
+Attacker → Fake RF Transmission → Satellite Receiver Accepts Signal → Unauthorized Command Execution
+
+Impact:
+
+Command hijacking and mission integrity compromise.
+
+---
+
+#### 3. Telemetry Manipulation Attack
+
+Attack Path:
+
+Attacker → Telemetry Processing System Access → Data Alteration → False Status Displayed to Operators
+
+Impact:
+
+Delayed anomaly detection and attacker persistence inside mission infrastructure.
+
+---
+
+### Security Control Recommendations
+
+| Layer | Recommended Control |
+|------|--------------------|
+Operator Access | Multi-Factor Authentication (MFA) |
+Mission Control Systems | Role-Based Access Control (RBAC) |
+Command Infrastructure | Command Authentication & Logging |
+RF Communication Links | Encryption & Anti-Replay Protection |
+Satellite OBC | Secure Boot & Command Validation |
+
+---
+
+### Risk Prioritization Matrix
+
+| Threat | Risk Level |
+|-------|------------|
+Command Injection | Critical |
+Telemetry Manipulation | High |
+RF Spoofing | High |
+RF Jamming | Medium |
+Payload Tampering | Medium |
+
+---
+
+### Assessment Outcome
+
+This project demonstrates a structured satellite cybersecurity threat model covering system architecture, command-channel risks, telemetry integrity threats, RF-layer attack surfaces, and mitigation strategies aligned with modern spacecraft operations security practices.
+
+---
 ## 🚀 Future Improvements
 
-Planned next steps:
+Planned next steps for extending this satellite security assessment:
 
-- Add RF signal analysis using RTL-SDR
-- Implement CCSDS telemetry packet parsing
-- Simulate command injection scenarios
-- Expand threat model using STRIDE methodology
+- Perform RF signal monitoring using RTL-SDR hardware
+- Analyze CCSDS telemetry packet structures
+- Simulate telecommand injection scenarios in a controlled lab setup
+- Expand the threat model using the STRIDE methodology
+- Build a satellite telemetry decoder prototype in Python
 
 ---
 
 ## 👨‍💻 Author
 
 Ashish Kumar Giri  
-Cybersecurity Engineer (VAPT → Space Cybersecurity)
+Cybersecurity Engineer (VAPT → Space Cybersecurity Transition)
 
 ---
 
 ## ⭐ Project Status
 
-Completed as part of Space Cybersecurity learning roadmap (Month 1)
+Completed as part of a structured Space Cybersecurity learning roadmap (Month 1 – Satellite Systems & Threat Modeling).
 
